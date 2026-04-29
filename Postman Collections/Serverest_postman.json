@@ -7,31 +7,65 @@
 	},
 	"item": [
 		{
-			"name": "Query all users",
-			"event": [
+			"name": "users",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"id": "786949d3-88a4-421f-a99e-7b84638ddd1a",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {},
-						"requests": {}
-					}
+					"name": "Query all users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "786949d3-88a4-421f-a99e-7b84638ddd1a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "07b8030b-4d5d-4853-b44a-0af3cf8cb8ad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}usuarios",
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
 				}
 			],
-			"id": "07b8030b-4d5d-4853-b44a-0af3cf8cb8ad",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{base_url}}usuarios",
-				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
-			},
-			"response": []
+			"id": "9c57db89-ffe6-48b5-bacc-7abd339ce5d5"
+		},
+		{
+			"name": "login",
+			"item": [],
+			"id": "53d0a7a2-9024-4515-8aa1-1842b9494346"
+		},
+		{
+			"name": "products",
+			"item": [],
+			"id": "cbf1ab8f-04e6-4a43-9342-12ebeb145313"
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "e5ee61a8-142b-422d-9602-c88ee509f1d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "53d130d1-8298-4938-ad19-2b30bb0068ad"
 		},
 		{
 			"name": "Query all products",
