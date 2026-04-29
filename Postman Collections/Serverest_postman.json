@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Get data",
+			"name": "Check all users",
 			"event": [
 				{
 					"listen": "test",
@@ -75,6 +75,38 @@
 				"header": []
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0cac2e38-b7a9-4cd3-a1de-46ea12e880e8",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fd7280dc-1672-4841-9daa-506a095e2c32",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": ""
 		}
 	]
 }
