@@ -46,39 +46,41 @@
 		},
 		{
 			"name": "products",
-			"item": [],
+			"item": [
+				{
+					"name": "Query all products",
+					"id": "8746f25d-b966-45ef-9567-e285e07b8a84",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}produtos"
+					},
+					"response": []
+				}
+			],
 			"id": "cbf1ab8f-04e6-4a43-9342-12ebeb145313"
 		},
 		{
 			"name": "cart",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Query all carts",
 					"id": "e5ee61a8-142b-422d-9602-c88ee509f1d8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{base_url}}carrinhos"
 					},
 					"response": []
 				}
 			],
 			"id": "53d130d1-8298-4938-ad19-2b30bb0068ad"
-		},
-		{
-			"name": "Query all products",
-			"id": "8746f25d-b966-45ef-9567-e285e07b8a84",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{base_url}}produtos"
-			},
-			"response": []
 		}
 	],
 	"event": [
