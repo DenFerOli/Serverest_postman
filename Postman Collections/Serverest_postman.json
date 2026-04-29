@@ -39,19 +39,22 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
+						"id": "ca8260a2-54cd-434b-a426-54f05550debf",
 						"exec": [
 							"pm.test(\"Successful POST request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
 							"});",
 							""
-						]
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
 					}
 				}
 			],
 			"id": "aab2c3bb-fa05-498c-833d-239a06accf96",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -62,20 +65,8 @@
 						}
 					}
 				},
-				"url": "postman-echo.com/post",
+				"url": "{{base_url}}/produtos",
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"id": "af88cf85-86b4-46f8-9d02-13f0c4e1f02b",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		}
@@ -84,7 +75,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1f4022a2-3188-4e03-8f80-c4dc090da98e",
+				"id": "9bd6d48a-41c9-4f67-8e00-18d20fa6f36d",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -96,7 +87,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "69cafc25-5f54-4ac2-b084-cea57392eb25",
+				"id": "05435a75-1241-40b5-baba-27ded1063573",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
