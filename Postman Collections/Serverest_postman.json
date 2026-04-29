@@ -7,17 +7,20 @@
 	},
 	"item": [
 		{
-			"name": "Check all users",
+			"name": "Query all users",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
+						"id": "786949d3-88a4-421f-a99e-7b84638ddd1a",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
 					}
 				}
 			],
@@ -25,13 +28,13 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "postman-echo.com/get",
+				"url": "{{base_url}}usuarios",
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
 			"response": []
 		},
 		{
-			"name": "Post data",
+			"name": "Query all products",
 			"event": [
 				{
 					"listen": "test",
@@ -81,7 +84,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0cac2e38-b7a9-4cd3-a1de-46ea12e880e8",
+				"id": "1f4022a2-3188-4e03-8f80-c4dc090da98e",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -93,7 +96,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "fd7280dc-1672-4841-9daa-506a095e2c32",
+				"id": "69cafc25-5f54-4ac2-b084-cea57392eb25",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
