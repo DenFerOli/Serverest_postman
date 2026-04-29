@@ -35,38 +35,14 @@
 		},
 		{
 			"name": "Query all products",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "ca8260a2-54cd-434b-a426-54f05550debf",
-						"exec": [
-							"pm.test(\"Successful POST request\", function () {",
-							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
-							"});",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {},
-						"requests": {}
-					}
-				}
-			],
-			"id": "aab2c3bb-fa05-498c-833d-239a06accf96",
+			"id": "8746f25d-b966-45ef-9567-e285e07b8a84",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{base_url}}/produtos",
-				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+				"url": "{{base_url}}produtos"
 			},
 			"response": []
 		}
@@ -75,7 +51,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "9bd6d48a-41c9-4f67-8e00-18d20fa6f36d",
+				"id": "70bd5638-9f25-4ab3-896e-82944b80e647",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -87,7 +63,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "05435a75-1241-40b5-baba-27ded1063573",
+				"id": "529904d0-e796-46e2-8d98-23e79f1e01ed",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
