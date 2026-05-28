@@ -41,7 +41,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Register user",
 					"id": "c4ed6af7-aefb-4e11-b5cd-be2f22b295e7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
