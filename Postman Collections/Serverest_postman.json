@@ -106,6 +106,19 @@
 						"url": "{{base_url}}/usuarios/{{userId}}"
 					},
 					"response": []
+				},
+				{
+					"name": "Delete user",
+					"id": "5e58feb0-600d-48c0-afe1-de50800ae045",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}usuarios/{{userId}}"
+					},
+					"response": []
 				}
 			],
 			"id": "9c57db89-ffe6-48b5-bacc-7abd339ce5d5"
