@@ -77,6 +77,18 @@
 						"url": "{{base_url}}usuarios"
 					},
 					"response": []
+				},
+				{
+					"name": "Query registered user",
+					"id": "7f333d61-eb6e-435a-a30a-6ec982f9141a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "9c57db89-ffe6-48b5-bacc-7abd339ce5d5"
