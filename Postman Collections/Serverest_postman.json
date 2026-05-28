@@ -109,6 +109,22 @@
 				},
 				{
 					"name": "Delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "edce7ea1-59b8-4858-a87a-335a5cab8911",
+								"exec": [
+									"pm.test(\"Response time is less than 1 second\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "5e58feb0-600d-48c0-afe1-de50800ae045",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -117,6 +133,18 @@
 						"method": "DELETE",
 						"header": [],
 						"url": "{{base_url}}/usuarios/{{userId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "8b572197-fb82-4e5a-9813-fd493f30e776",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
