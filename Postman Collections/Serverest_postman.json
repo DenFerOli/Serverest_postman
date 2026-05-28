@@ -15,7 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "786949d3-88a4-421f-a99e-7b84638ddd1a",
+								"id": "9eede290-eb2c-4fae-a51d-07f4bdb262ca",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -23,7 +23,9 @@
 									"",
 									"pm.test(\"Response time is less than 1 second\", () => {",
 									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
-									"})"
+									"})",
+									"",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -35,7 +37,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}usuarios",
+						"url": "{{base_url}}/usuarios",
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 					},
 					"response": []
@@ -71,7 +73,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -156,7 +158,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e25a1edc-37bd-4162-b8ec-dd26ce87bb45",
+				"id": "df75443a-24bc-48ea-b5d3-a0dd9330a426",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -168,7 +170,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ca023f8b-ecde-4e2e-8acc-de8d7c743a7d",
+				"id": "626f8c19-c4d0-4020-baab-8171241c9e2a",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -181,6 +183,14 @@
 	"variable": [
 		{
 			"key": "base_url",
+			"value": ""
+		},
+		{
+			"key": "userId",
+			"value": ""
+		},
+		{
+			"key": "produtoId",
 			"value": ""
 		}
 	]
