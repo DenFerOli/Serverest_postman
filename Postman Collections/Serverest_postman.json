@@ -48,6 +48,14 @@
 							"script": {
 								"id": "8e9432e0-6ed5-47dd-9582-ec813603fc5e",
 								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 1 second\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"})\r",
+									"\r",
 									"const jsonData = pm.response.json();\r",
 									"const userId = jsonData._id;\r",
 									"pm.environment.set(\"userId\", userId);"
@@ -74,7 +82,7 @@
 								}
 							}
 						},
-						"url": "{{base_url}}usuarios"
+						"url": "{{base_url}}/usuarios"
 					},
 					"response": []
 				},
@@ -86,7 +94,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/usuarios/{{userId}}"
 					},
 					"response": []
 				}
