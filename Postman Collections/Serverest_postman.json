@@ -42,13 +42,39 @@
 				},
 				{
 					"name": "Register user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8e9432e0-6ed5-47dd-9582-ec813603fc5e",
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"const userId = jsonData._id;\r",
+									"pm.environment.set(\"userId\", userId);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "c4ed6af7-aefb-4e11-b5cd-be2f22b295e7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Den QA Test\",\r\n    \"email\": \"denqatest@email.com\",\r\n    \"password\": \"teste\",\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}usuarios"
 					},
 					"response": []
 				}
