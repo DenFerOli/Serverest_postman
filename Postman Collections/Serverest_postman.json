@@ -50,7 +50,7 @@
 							"script": {
 								"id": "8e9432e0-6ed5-47dd-9582-ec813603fc5e",
 								"exec": [
-									"pm.test(\"Status code is 200\", () => {\r",
+									"pm.test(\"Status code is 201\", () => {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
@@ -116,7 +116,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{base_url}}usuarios/{{userId}}"
+						"url": "{{base_url}}/usuarios/{{userId}}"
 					},
 					"response": []
 				}
